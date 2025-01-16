@@ -7,9 +7,15 @@ from matplotlib.animation import FuncAnimation
 # Constants
 g = 9.81  # gravitational acceleration (m/s^2)
 L1 = 1.0  # length of the first pendulum (m)
-L2 = 1.0  # length of the second pendulum (m)
+L2 = 0.5  # length of the second pendulum (m)
 m1 = 1.0  # mass of the first pendulum (kg)
-m2 = 1.0  # mass of the second pendulum (kg)
+m2 = 5.0  # mass of the second pendulum (kg)
+
+# Initial conditions
+theta1_0 = np.pi / 4  # initial angle of the first pendulum (rad)
+theta2_0 = np.pi / 2  # initial angle of the second pendulum (rad)
+z1_0 = 0.0            # initial angular velocity of the first pendulum (rad/s)
+z2_0 = -20.0            # initial angular velocity of the second pendulum (rad/s)
 
 # Equations of motion
 def equations(t, y):
@@ -39,11 +45,7 @@ def equations(t, y):
 
     return [theta1_dot, z1_dot, theta2_dot, z2_dot]
 
-# Initial conditions
-theta1_0 = np.pi / 4  # initial angle of the first pendulum (rad)
-theta2_0 = np.pi / 2  # initial angle of the second pendulum (rad)
-z1_0 = 0.0            # initial angular velocity of the first pendulum (rad/s)
-z2_0 = 0.0            # initial angular velocity of the second pendulum (rad/s)
+
 
 # Time span and resolution
 t_span = (0, 10)  # time range (s)
