@@ -7,15 +7,15 @@ from matplotlib.animation import FuncAnimation
 # Constants
 g = 9.81  # gravitational acceleration (m/s^2)
 L1 = 1.0  # length of the first pendulum (m)
-L2 = 1.0  # length of the second pendulum (m)
-m1 = 1.0  # mass of the first pendulum (kg)
+L2 = 0.5  # length of the second pendulum (m)
+m1 = 5.0  # mass of the first pendulum (kg)
 m2 = 1.0  # mass of the second pendulum (kg)
 
 # Initial conditions
-theta1_0 = np.pi / 10  # initial angle of the first pendulum (rad)
-theta2_0 = np.pi / 8  # initial angle of the second pendulum (rad)
-z1_0 = 0.0            # initial angular velocity of the first pendulum (rad/s)
-z2_0 = 0.0            # initial angular velocity of the second pendulum (rad/s)
+theta1_0 = 5 * np.pi / 180      # initial angle of the first pendulum (rad)
+theta2_0 = -10 * np.pi / 180    # initial angle of the second pendulum (rad)
+z1_0 = 10.0 * np.pi / 180       # initial angular velocity of the first pendulum (rad/s)
+z2_0 = 0.0                      # initial angular velocity of the second pendulum (rad/s)
 
 # inisiasi eigenvalue - eigenvector
 max_error = 1E-12     # batas error
